@@ -70,15 +70,25 @@ qty > 0 and rate >= 0
 📂 Folder Structure
 
 src/
+
 ├── components/
+
 │   ├── HeaderForm.jsx
+
 │   └── DetailForm.jsx
+
 ├── pages/
+
 │   └── Home.jsx
+
 ├── store/
+
 │   └── salesReducer.js
+
 │   └── Store.jsx
+
 └── App.js
+
 
 🧑‍💻 Author
 
