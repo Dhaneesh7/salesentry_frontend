@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+Sales Entry Form (React + Redux)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based Sales Entry application with dynamic header and detail tables. It supports adding, editing, validating, and saving sales entries, with data fetched from a backend API.
 
-## Available Scripts
+📌 Features
 
-In the project directory, you can run:
+Header form with fields: Vr No, Vr Date, Status, Ac Name, Ac Amt
 
-### `npm start`
+Detail table with:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dynamic rows for items (Add/Remove)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Auto calculation of total amount (Qty x Rate)
 
-### `npm test`
+Item code dropdown populated from backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Redux Toolkit for state management
 
-### `npm run build`
+API Integration:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Fetch item data: GET /item
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Post header & detail: POST /header/multiple
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Validation before saving
 
-### `npm run eject`
+🧩 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Redux Toolkit
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Axios
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tailwind CSS
 
-## Learn More
+📦 Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Clone the repository
+git clone https://github.com/Dhaneesh7/salesentry_frontend.git
+cd salesentry_frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install dependencies
+npm install
 
-### Code Splitting
+# Start the dev server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🚀 API Endpoints
 
-### Analyzing the Bundle Size
+GET http://5.189.180.8:8010/item - fetch item master data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+POST http://5.189.180.8:8010/header/multiple - save sales entry (header + detail)
 
-### Making a Progressive Web App
+📋 Validation Rules
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+All header fields are required 
 
-### Advanced Configuration
+In each detail row:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+item_code, item_name, qty, and rate are mandatory
 
-### Deployment
+qty > 0 and rate >= 0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+🖥️ UI Snapshot
 
-### `npm run build` fails to minify
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/31b19d8e-1f91-4946-8a3e-84592474361f" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+📂 Folder Structure
+
+src/
+├── components/
+│   ├── HeaderForm.jsx
+│   └── DetailForm.jsx
+├── pages/
+│   └── Home.jsx
+├── store/
+│   └── salesReducer.js
+│   └── Store.jsx
+└── App.js
+
+🧑‍💻 Author
+
+Dhaneesh v jayakumaran
+github-profile:- Dhaneesh7
+
+
