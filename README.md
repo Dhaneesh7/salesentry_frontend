@@ -72,21 +72,21 @@ qty > 0 and rate >= 0
 src/
 
 ├── components/
-│
+
 │   ├── HeaderForm.jsx
-│
+
 │   └── DetailForm.jsx
-│
+
 ├── pages/
-│
+
 │   └── Home.jsx
-│
+
 ├── store/
-│
+
 │   └── salesReducer.js
-│
+
 │   └── Store.jsx
-│
+
 └── App.js
 
 
